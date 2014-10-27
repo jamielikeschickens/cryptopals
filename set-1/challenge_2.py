@@ -6,8 +6,8 @@ def fixed_xor(value_1, value_2):
 
 if __name__ == "__main__":
     xor_data = fixed_xor('1c0111001f010100061a024b53535009181c', '686974207468652062756c6c277320657965')
-    xor_string = ""
-    for x in xor_data:
-        xor_string += ("%x" % x)
+    xor_string = ''.join(["%x" % x for x in xor_data])
+
+
 
     print xor_string

@@ -21,7 +21,7 @@ def hex_to_base64(byte_string):
         print "padded"
         byte_string.append(0x00)
 
-    while (byte_str_length > 0):
+    while byte_str_length > 0:
         index = ((byte_string[0 + offset] & 0xFC) >> 2)
         conv_array.append(base_64_table[index])
 
