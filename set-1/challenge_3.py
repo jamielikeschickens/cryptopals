@@ -7,7 +7,7 @@ def brute_xor(ciphertext):
     for key in range(0, 255):
         long_key =  str(key) * cipher_len
 
-        result = fixed_xor(ciphertext, long_key)
+        result = fixed_xor(bytearray.fromhex(ciphertext), bytearray.fromhex(long_key))
         hex_string = ''.join(["%02x" % a for a in result])
         plaintext = hex_string.decode("hex")
         score = score_text(plaintext)
